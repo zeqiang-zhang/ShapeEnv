@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shapeenv"
+version = "1.0.0"
+description = "Shape / NoisyShape diagnostic environments for probing world-model representations under visual distractors (StarWM)."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "pillow",
+    "gymnasium",
+]
+
+[project.optional-dependencies]
+probe = ["torch", "scikit-learn", "tqdm"]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["shapeenv"]
